@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Created by SharpDevelop.
  * User: razvan
  * Date: 5/24/2024
@@ -51,13 +51,14 @@ namespace melcDraw
 			 double px = x;
 			 double py = y;
 			 float iT = 0.0f;
-			 float step = 10.0f;
+			 float err = 40.0f;
+			 float step = err;
 			 float cerc =  360.0f;
-			 float z = 1/10;
+			 float z = 1/err;
 			 for(float i = 0.0f ; i<10*cerc+step; i+=step)
 			 {
 			 	iT += 1.0f;
-			 	z = (i/10);
+			 	z = (i/err);
 			 	x = (z+L)*(Math.Cos(i/rad))+rx+iT-z;
 			 	y = (z+T)*(Math.Sin(i/rad))+ry+iT-z;
 			 	
