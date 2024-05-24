@@ -39,8 +39,8 @@ namespace melcDraw
 		
 		public void drawMelc()
 		{
-			 int L = 200;
-			 int T = 200;
+			 int L = 50;
+			 int T = 50;
 			 float rx = 300;
 			 float ry = 300;
 			 double rad = 180/Math.PI;
@@ -51,11 +51,11 @@ namespace melcDraw
 			 double px = x;
 			 double py = y;
 			 float iT = 0.0f;
-			 float err = 40.0f;
+			 float err = 12.0f;
 			 float step = err;
 			 float cerc =  360.0f;
 			 float z = 1/err;
-			 for(float i = 0.0f ; i<10*cerc+step; i+=step)
+			 for(float i = 0.0f ; i<20*cerc+step; i+=step)
 			 {
 			 	iT += 1.0f;
 			 	z = (i/err);
