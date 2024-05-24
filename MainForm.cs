@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Created by SharpDevelop.
  * User: razvan
  * Date: 5/24/2024
@@ -39,8 +39,8 @@ namespace melcDraw
 		
 		public void drawMelc()
 		{
-			 int L = 50;
-			 int T = 50;
+			 int L = 25;
+			 int T = 25;
 			 float rx = 300;
 			 float ry = 300;
 			 double rad = 180/Math.PI;
@@ -51,19 +51,20 @@ namespace melcDraw
 			 double px = x;
 			 double py = y;
 			 float iT = 0.0f;
-			 float err = 12.0f;
+			 float err = 38.0f;
 			 float step = err;
 			 float cerc =  360.0f;
 			 float z = 1/err;
-			 for(float i = 0.0f ; i<20*cerc+step; i+=step)
+			 for(float i = 0.0f ; i<100*cerc+step; i+=step)
 			 {
 			 	iT += 1.0f;
+			 	
 			 	z = (i/err);
 			 	x = (z+L)*(Math.Cos(i/rad))+rx+iT-z;
 			 	y = (z+T)*(Math.Sin(i/rad))+ry+iT-z;
 			 	
 			 	g.DrawLine(p,(float)x,(float)y,(float)px,(float)py);
-			 	
+			 	g.DrawEllipse(p,(float)x,(float)y,iT/100,iT/100);
 			 	px = x;
 			 	py = y;
 			 }
